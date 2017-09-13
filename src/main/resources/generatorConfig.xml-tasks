@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<context id="dev">
+		<!-- 基于oracle的分页插件 -->
+		<plugin type="org.mybatis.generator.plugins.PagingByOraclePlugin"></plugin>
+		<!-- JDBC -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.101.19:3306/hcqsjdj?useUnicode=true&amp;characterEncoding=utf-8" userId="root" password="123456" />
+		<!-- Xxx.java java文件存放路径-->
+		<javaModelGenerator targetPackage="com.cattsoft.entity" targetProject="/Users/fuxm/IdeaProjects/test/tasks/src/main/java">
+			<!-- <property name="rootClass" value="com.cattsoft.baseplatform.core.entity.Entity" / > -->
+		</javaModelGenerator>
+		<!-- XxxMapper.xml -->
+		<sqlMapGenerator targetPackage="persistence" targetProject="/Users/fuxm/IdeaProjects/test/tasks/src/main/resources" />
+		<!-- XxxMapper.java -->
+		<javaClientGenerator targetPackage="com.cattsoft.persistence" targetProject="/Users/fuxm/IdeaProjects/test/tasks/src/main/java" type="XMLMAPPER" />
+		<!-- 同时生成多张表的，配置多个table节点 ,oracle数据库生成表时去掉schema="tgjd_test"即可-->
+		<table schema="hcqsjdj" tableName="cgm_rpt_building_style" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<table schema="hcqsjdj" tableName="cgm_rpt_building_usage" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<table schema="hcqsjdj" tableName="cgm_rpt_case_disposal_dip" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<table schema="hcqsjdj" tableName="cgm_rpt_case_disposal_sec" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<table schema="hcqsjdj" tableName="cgm_rpt_case_pet_res" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<table schema="hcqsjdj" tableName="cgm_rpt_case_type_dip" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<table schema="hcqsjdj" tableName="cgm_rpt_case_type_pet" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<table schema="hcqsjdj" tableName="cgm_rpt_case_type_sec" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<table schema="hcqsjdj" tableName="cgm_rpt_community_person" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<table schema="hcqsjdj" tableName="cgm_rpt_education" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<table schema="hcqsjdj" tableName="cgm_rpt_gender" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<table schema="hcqsjdj" tableName="cgm_rpt_house_owner_style" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<table schema="hcqsjdj" tableName="cgm_rpt_house_status" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<table schema="hcqsjdj" tableName="cgm_rpt_key_service_person" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<table schema="hcqsjdj" tableName="cgm_rpt_person_age" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<table schema="hcqsjdj" tableName="cgm_rpt_person_count" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<table schema="hcqsjdj" tableName="cgm_rpt_person_style" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+		<table schema="hcqsjdj" tableName="cgm_rpt_political_status" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+	</context>
+</generatorConfiguration>

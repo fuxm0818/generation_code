@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<context id="dev">
+		<!-- 基于oracle的分页插件 -->
+		<plugin type="org.mybatis.generator.plugins.PagingByOraclePlugin"></plugin>
+		<!-- JDBC -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+						connectionURL="jdbc:mysql://192.168.101.19:3306/zyfp2_dev?useUnicode=true&amp;characterEncoding=utf-8" userId="root" password="123456" />
+		<!-- Xxx.java java文件存放路径-->
+		<javaModelGenerator targetPackage="com.cattsoft.zyfp.entity" targetProject="/Users/fuxm/IdeaProjects/zyfp2/zyfp2-service/src/main/java/">
+			<property name="rootClass" value="com.cattsoft.baseplatform.core.entity.Entity" />
+		</javaModelGenerator>
+		<!-- XxxMapper.xml -->
+		<sqlMapGenerator targetPackage="com.cattsoft.zyfp.persistence" targetProject="/Users/fuxm/IdeaProjects/zyfp2/zyfp2-service/src/main/resources/" />
+		<!-- XxxMapper.java -->
+		<javaClientGenerator targetPackage="com.cattsoft.zyfp.persistence" targetProject="/Users/fuxm/IdeaProjects/zyfp2/zyfp2-service/src/main/java/" type="XMLMAPPER" />
+		<!-- 同时生成多张表的，配置多个table节点 ,oracle数据库生成表时去掉schema="tgjd_test"即可-->
+		<table schema="zyfp2_dev" tableName="fp_bfjh" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+	</context>
+</generatorConfiguration>
